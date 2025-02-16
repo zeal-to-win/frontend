@@ -1,0 +1,18 @@
+[build]
+  command = "pnpm install && pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--version"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Content-Type = "text/javascript"
+
+# Handle routing for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
