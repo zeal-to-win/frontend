@@ -11,6 +11,16 @@
   [headers.values]
     Content-Type = "text/javascript"
 
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
 # Handle routing for SPA
 [[redirects]]
   from = "/*"
